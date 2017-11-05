@@ -52,7 +52,7 @@ let firstConnectedSocket = null
 
 // Kevin: CHANGE: ADD A HEADER
 app.use(function(req, res, next) {
-  res.setHeader("Content-Security-Policy", script-src 'none');
+  res.setHeader("Content-Security-Policy", script-src 'self');
   return next();
 });
 
