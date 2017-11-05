@@ -50,6 +50,12 @@ const appConfiguration = require('./routes/appConfiguration')
 const config = require('config')
 let firstConnectedSocket = null
 
+// Kevin: CHANGE: ADD A HEADER
+//app.use(function(req, res, next) {
+//  res.setHeader("Content-Security-Policy", "script-src 'self'");
+//  return next();
+//});
+
 global.io = io
 errorhandler.title = 'Juice Shop (Express ' + utils.version('express') + ')'
 
