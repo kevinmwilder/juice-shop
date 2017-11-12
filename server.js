@@ -50,7 +50,7 @@ const appConfiguration = require('./routes/appConfiguration')
 const config = require('config')
 let firstConnectedSocket = null
 
-// Kevin: CHANGE: ADD A HEADER
+// CHANGE: CSP HEADER
 app.use(function(req, res, next) {
   res.setHeader("Content-Security-Policy", script-src 'self');
   return next();
