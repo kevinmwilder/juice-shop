@@ -52,7 +52,7 @@ let firstConnectedSocket = null
 
 // CHANGE: CSP HEADER
 app.use(function(req, res, next) {
-  res.setHeader("Content-Security-Policy", "script-src 'self'");
+  res.setHeader("Content-Security-Policy", "script-src 'self'; object-src 'none'; report-uri https://prod-29.northcentralus.logic.azure.com:443/workflows/90485f53082e492e8c4e52d3aa2843cb/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=WioJbwbRj7Atvy1OnNQg7_ZnEm6LH9ZDzYYB4lPlKyY");
   return next();
 });
 
