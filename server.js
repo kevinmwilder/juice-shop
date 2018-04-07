@@ -52,7 +52,7 @@ let firstConnectedSocket = null
 
 // CHANGE: CSP HEADER
 app.use(function(req, res, next) {
-  res.setHeader("Content-Security-Policy-Report-Only", "script-src 'self'; object-src 'none'; ?* report-uri example.com */" );
+  res.setHeader("Content-Security-Policy-Report-Only", "script-src 'self'; object-src 'none'; /* report-uri example.com */" );
   return next();
 });
 
